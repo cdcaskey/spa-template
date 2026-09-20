@@ -30,7 +30,6 @@ config/
 # Environment and secrets
 .env
 .env.*
-!.env.example
 !config-defaults/.env
 !config-defaults/.env.*
 *.pem
