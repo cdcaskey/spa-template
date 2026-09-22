@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { AppShell, Badge, Group, Text, Title } from '@mantine/core';
+import { CheckCircle, CircleNotch } from '@phosphor-icons/react';
 
 type HealthResponse = { status: 'ok'; db: 'ok' | 'error' };
 
@@ -18,7 +19,12 @@ export function App() {
       <AppShell.Header>
         <Group h="100%" px="md" justify="space-between">
           <Title order={4}>App Name</Title>
-          <Badge color={health?.status === 'ok' ? 'green' : 'gray'}>
+          <Badge
+            color={health?.status === 'ok' ? 'green' : 'gray'}
+            leftSection={
+              health ? <CheckCircle size={12} weight="fill" /> : <CircleNotch size={12} />
+            }
+          >
             {health ? `api ${health.status} / db ${health.db}` : 'connecting…'}
           </Badge>
         </Group>

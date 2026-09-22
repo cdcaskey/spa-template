@@ -2,7 +2,8 @@
 
 ## Stack
 
-- Vite + React + TypeScript + Mantine (frontend, `src/`)
+- Vite + React + TypeScript + Mantine (frontend, `src/`), icons via
+  `@phosphor-icons/react` (Mantine's recommended icon set)
 - Fastify + better-sqlite3 (API + static serving, `server/`), single
   container serves both — no separate reverse proxy needed by the app
   itself
